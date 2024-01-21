@@ -50,65 +50,15 @@
                 font-weight: 400
             }
 
-            [data-component-type=Text]>* {
-                text-align: var(--text-alignment, start)
-            }
-
             .svgContainer svg,[data-component-type=Text] h1 span,[data-component-type=Text] h2 span,[data-component-type=Text] h3 span,[data-component-type=Text] h4 span,[data-component-type=Text] h5 span,[data-component-type=Text] h6 span,[data-component-type=Text] p span,[data-component-type=Text] span span {
                 display: block
             }
-
-
-            [data-component-type=RichText] {
-                cursor: inherit
-            }
-
-
-       
-
-
-            [data-component-type=PageContentWrapper]>*,[data-component-type=PageContentWrapper]>[data-component-type] {
-                position: relative
-            }
-
-            [data-is-present=false],[data-is-present=false] * {
-                pointer-events: none!important
-            }
-
-            [data-ecursor=pointer] {
-                cursor: pointer
-            }
-
-            [data-ecursor=grab] {
-                cursor: grab
-            }
-
-            [data-ecursor=grab]:active {
-                cursor: grabbing
-            }
-
-            [data-component-type=Frame] *,[data-component-type=Stack] * {
-                pointer-events: auto
-            }
-
-            [data-egenerated] * {
-                pointer-events: unset
-            }
-
-            [data-reset=button] {
-                border-width: 0;
-                padding: 0
-            }
-
-
 
             @supports (aspect-ratio: 1) {
                 body {
                     --easpect-ratio-supported:auto
                 }
             }
-
-
        
             /* Styles for the "YO" and "Contact Me" text */
             .centered-text {
