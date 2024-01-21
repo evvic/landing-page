@@ -4,31 +4,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Eric Brown</title>
-        <meta name="description" content="">
+        <meta name="description" content="Business card">
         <link rel="icon" href="assets/github_icon.png">
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
         <meta property="og:title" content="Eric Brown">
-        <meta property="og:description" content="">
+        <meta property="og:description" content="Business card">
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:title" content="Eric Brown">
-        <meta property="twitter:description" content="">
+        <meta property="twitter:description" content="Business card">
         <!-- End of headStart -->
         <link rel="preload" href="https://fonts.gstatic.com/s/outfit/v4/QGYyz_MVcBeNP4NjuGObqx1XmO1I4deyC4G-EiAou6Y.ttf" as="font" crossorigin="">
         <link rel="preload" href="https://fonts.gstatic.com/s/outfit/v4/QGYyz_MVcBeNP4NjuGObqx1XmO1I4TC1C4G-EiAou6Y.ttf" as="font" crossorigin="">
         <style>
-            #main,body,html {
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box
-            }
-
-            body,button,input,select,textarea {
-                font-family: "Inter",sans-serif;
-                font-size: 12px
-            }
 
             :root {
                 -webkit-font-smoothing: antialiased
@@ -61,18 +50,6 @@
                 font-weight: 400
             }
 
-            [data-component-type] {
-                position: absolute
-            }
-
-            [data-component-type=Text] {
-                cursor: inherit
-            }
-
-            [data-component-text-autosized] * {
-                white-space: pre
-            }
-
             [data-component-type=Text]>* {
                 text-align: var(--text-alignment, start)
             }
@@ -81,185 +58,14 @@
                 display: block
             }
 
-            [data-component-type=Text] h1 span span,[data-component-type=Text] h2 span span,[data-component-type=Text] h3 span span,[data-component-type=Text] h4 span span,[data-component-type=Text] h5 span span,[data-component-type=Text] h6 span span,[data-component-type=Text] p span span,[data-component-type=Text] span span span {
-                display: unset
-            }
-
-            [data-component-type=Text] a,[data-component-type=Text] a div span,[data-component-type=Text] div div span,[data-component-type=Text] h1 span span,[data-component-type=Text] h2 span span,[data-component-type=Text] h3 span span,[data-component-type=Text] h4 span span,[data-component-type=Text] h5 span span,[data-component-type=Text] h6 span span,[data-component-type=Text] p span span,[data-component-type=Text] span span span {
-                font-family: var(--font-family);
-                font-style: var(--font-style);
-                font-weight: min(calc(var(--font-weight-increase, 0) + var(--font-weight, 400)),900);
-                color: var(--text-color);
-                letter-spacing: var(--letter-spacing);
-                font-size: var(--font-size);
-                text-transform: var(--text-transform);
-                text-decoration: var(--text-decoration);
-                line-height: var(--line-height);
-                --font-family: var(--font-family);
-                --font-style: var(--font-style);
-                --font-weight: var(--font-weight);
-                --text-color: var(--text-color);
-                --letter-spacing: var(--letter-spacing);
-                --font-size: var(--efont-size);
-                --text-transform: var(--text-transform);
-                --text-decoration: var(--text-decoration);
-                --line-height: var(--line-height)
-            }
-
-            [data-component-type=Text] a,[data-component-type=Text] a div span,[data-component-type=Text] a h1 span span,[data-component-type=Text] a h2 span span,[data-component-type=Text] a h3 span span,[data-component-type=Text] a h4 span span,[data-component-type=Text] a h5 span span,[data-component-type=Text] a h6 span span,[data-component-type=Text] a p span span,[data-component-type=Text] a span span span {
-                --font-family: var(--elink-font-family, var(--font-family));
-                --font-style: var(--elink-font-style, var(--font-style));
-                --font-weight: var(--elink-font-weight, var(--font-weight));
-                --text-color: var(--elink-text-color, var(--text-color));
-                --font-size: var(--elink-font-size, var(--efont-size));
-                --text-transform: var(--elink-text-transform, var(--text-transform));
-                --text-decoration: var(--elink-text-decoration, var(--text-decoration))
-            }
-
-            [data-component-type=Text] a div span:hover,[data-component-type=Text] a h1 span span:hover,[data-component-type=Text] a h2 span span:hover,[data-component-type=Text] a h3 span span:hover,[data-component-type=Text] a h4 span span:hover,[data-component-type=Text] a h5 span span:hover,[data-component-type=Text] a h6 span span:hover,[data-component-type=Text] a p span span:hover,[data-component-type=Text] a span span span:hover,[data-component-type=Text] a:hover {
-                --font-family: var(--elink-hover-font-family, var(--elink-font-family, var(--font-family)));
-                --font-style: var(--elink-hover-font-style, var(--elink-font-style, var(--font-style)));
-                --font-weight: var(--elink-hover-font-weight, var(--elink-font-weight, var(--font-weight)));
-                --text-color: var(--elink-hover-text-color, var(--elink-text-color, var(--text-color)));
-                --font-size: var(--elink-hover-font-size, var(--elink-font-size, var(--efont-size)));
-                --text-transform: var(--elink-hover-text-transform, var(--elink-text-transform, var(--text-transform)));
-                --text-decoration: var(--elink-hover-text-decoration, var(--elink-text-decoration, var(--text-decoration)))
-            }
-
-            [data-component-type=Text].isCurrent a,[data-component-type=Text].isCurrent a div span,[data-component-type=Text].isCurrent a h1 span span,[data-component-type=Text].isCurrent a h2 span span,[data-component-type=Text].isCurrent a h3 span span,[data-component-type=Text].isCurrent a h4 span span,[data-component-type=Text].isCurrent a h5 span span,[data-component-type=Text].isCurrent a h6 span span,[data-component-type=Text].isCurrent a p span span,[data-component-type=Text].isCurrent a span span span {
-                --font-family: var(--elink-current-font-family, var(--elink-font-family, var(--font-family)));
-                --font-style: var(--elink-current-font-style, var(--elink-font-style, var(--font-style)));
-                --font-weight: var(--elink-current-font-weight, var(--elink-font-weight, var(--font-weight)));
-                --text-color: var(--elink-current-text-color, var(--elink-text-color, var(--text-color)));
-                --font-size: var(--elink-current-font-size, var(--elink-font-size, var(--efont-size)));
-                --text-transform: var(--elink-current-text-transform, var(--elink-text-transform, var(--text-transform)));
-                --text-decoration: var(--elink-current-text-decoration, var(--elink-text-decoration, var(--text-decoration)))
-            }
 
             [data-component-type=RichText] {
                 cursor: inherit
             }
 
-            [data-component-type=RichText] div,[data-component-type=RichText] h1,[data-component-type=RichText] h2,[data-component-type=RichText] h3,[data-component-type=RichText] h4,[data-component-type=RichText] h5,[data-component-type=RichText] h6,[data-component-type=RichText] p,[data-component-type=RichText] span {
-                font-family: var(--font-family, Inter, sans-serif);
-                font-style: var(--font-style, normal);
-                font-weight: var(--font-weight, 400);
-                color: var(--text-color, #000);
-                font-size: var(--efont-size, 16px);
-                letter-spacing: var(--letter-spacing, 0);
-                text-transform: var(--text-transform, none);
-                text-decoration: var(--text-decoration, none);
-                line-height: var(--line-height, 1.2em);
-                text-align: var(--text-alignment, start)
-            }
 
-            [data-component-type=RichText] a,[data-component-type=RichText] a span {
-                font-family: var(--elink-font-family, var(--font-family, Inter, sans-serif));
-                font-style: var(--elink-font-style, var(--font-style, normal));
-                font-weight: var(--elink-font-weight, var(--font-weight, 400));
-                color: var(--elink-text-color, var(--text-color, #000));
-                font-size: var(--elink-font-size, var(--efont-size, 16px));
-                text-transform: var(--elink-text-transform, var(--text-transform, none));
-                text-decoration: var(--elink-text-decoration, var(--text-decoration, none))
-            }
+       
 
-            [data-component-type=RichText] a:hover,[data-component-type=RichText] a:hover span {
-                font-family: var(--elink-hover-font-family, var(--elink-font-family, var(--font-family, Inter, sans-serif)));
-                font-style: var(--elink-hover-font-style, var(--elink-font-style, var(--font-style, normal)));
-                font-weight: var(--elink-hover-font-weight, var(--elink-font-weight, var(--font-weight, 400)));
-                color: var(--elink-hover-text-color, var(--elink-text-color, var(--text-color, #000)));
-                font-size: var(--elink-hover-font-size, var(--elink-font-size, var(--efont-size, 16px)));
-                text-transform: var(--elink-hover-text-transform, var(--elink-text-transform, var(--text-transform, none)));
-                text-decoration: var(--elink-hover-text-decoration, var(--elink-text-decoration, var(--text-decoration, none)))
-            }
-
-            [data-component-type=RichText].current a,[data-component-type=RichText].current a span {
-                font-family: var(--elink-current-font-family, var(--elink-font-family, var(--font-family, Inter, sans-serif)));
-                font-style: var(--elink-current-font-style, var(--elink-font-style, var(--font-style, normal)));
-                font-weight: var(--elink-current-font-weight, var(--elink-font-weight, var(--font-weight, 400)));
-                color: var(--elink-current-text-color, var(--elink-text-color, var(--text-color, #000)));
-                font-size: var(--elink-current-font-size, var(--elink-font-size, var(--efont-size, 16px)));
-                text-transform: var(--elink-current-text-transform, var(--elink-text-transform, var(--text-transform, none)));
-                text-decoration: var(--elink-current-text-decoration, var(--elink-text-decoration, var(--text-decoration, none)))
-            }
-
-            [data-component-type=RichText] strong {
-                font-weight: bolder
-            }
-
-            [data-component-type=RichText] em {
-                font-style: italic
-            }
-
-            [data-component-type=RichText] div,[data-component-type=RichText] h1,[data-component-type=RichText] h2,[data-component-type=RichText] h3,[data-component-type=RichText] h4,[data-component-type=RichText] h5,[data-component-type=RichText] h6,[data-component-type=RichText] p {
-                margin: 0;
-                padding: 0
-            }
-
-            :not([data-egenerated])>[data-stack-content-wrapper]>*,:not([data-egenerated])>[data-stack-content-wrapper]>[data-component-type],:not([data-egenerated])>[data-stack-content-wrapper]>[data-stack-gap]>*,:not([data-egenerated])>[data-stack-content-wrapper]>[data-stack-gap]>[data-component-type] {
-                position: relative
-            }
-
-            .flexbox-gap-not-supported [data-stack-gap]>*,[data-stack-gap][data-estack-flexbox-gap=false] {
-                margin: calc(var(--stack-gap-y)/2) calc(var(--stack-gap-x)/2)
-            }
-
-            [data-stack-content-wrapper][data-stack-gap-enabled=true] {
-                gap: var(--stack-native-gap)
-            }
-
-            .flexbox-gap-not-supported [data-stack-content-wrapper][data-stack-gap-enabled=true] {
-                gap: unset
-            }
-
-            .flexbox-gap-not-supported [data-estack-direction-reverse=false] [data-stack-gap]>:first-child,.flexbox-gap-not-supported [data-estack-direction-reverse=true] [data-stack-gap]>:last-child,[data-estack-direction-reverse=false] [data-stack-gap][data-estack-flexbox-gap=false]>:first-child,[data-estack-direction-reverse=true] [data-stack-gap][data-estack-flexbox-gap=false]>:last-child {
-                margin-top: 0;
-                margin-left: 0
-            }
-
-            .flexbox-gap-not-supported [data-estack-direction-reverse=false] [data-stack-gap]>:last-child,.flexbox-gap-not-supported [data-estack-direction-reverse=true] [data-stack-gap]>:first-child,[data-estack-direction-reverse=false] [data-stack-gap][data-estack-flexbox-gap=false]>:last-child,[data-estack-direction-reverse=true] [data-stack-gap][data-estack-flexbox-gap=false]>:first-child {
-                margin-right: 0;
-                margin-bottom: 0
-            }
-
-            NavigationContainer [data-component-type=NavigationContainer]>*,[data-component-type=NavigationContainer]>[data-component-type],[data-component-type=ScrollContentWrapper]>* {
-                position: relative
-            }
-
-            [data-component-type=NativeScroll].scrollbar-hidden::-webkit-scrollbar,[data-component-type=Scroll]::-webkit-scrollbar {
-                display: none
-            }
-
-            [data-component-type=NativeScroll] {
-                -webkit-overflow-scrolling: touch
-            }
-
-            [data-component-type=NativeScroll]>* {
-                position: relative
-            }
-
-            [data-component-type=NativeScroll].direction-both {
-                overflow-x: scroll;
-                overflow-y: scroll
-            }
-
-            [data-component-type=NativeScroll].direction-vertical {
-                overflow-x: hidden;
-                overflow-y: scroll
-            }
-
-            [data-component-type=NativeScroll].direction-horizontal {
-                overflow-x: scroll;
-                overflow-y: hidden
-            }
-
-            [data-component-type=NativeScroll].direction-vertical>* {
-                width: 100%!important
-            }
-
-            [data-component-type=NativeScroll].direction-horizontal>* {
-                height: 100%!important
-            }
 
             [data-component-type=PageContentWrapper]>*,[data-component-type=PageContentWrapper]>[data-component-type] {
                 position: relative
@@ -294,20 +100,7 @@
                 padding: 0
             }
 
-            .eRL7jO [data-border=true]::after {
-                content: "";
-                border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0);
-                border-color: var(--border-color, none);
-                border-style: var(--border-style, none);
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                box-sizing: border-box;
-                left: 0;
-                top: 0;
-                border-radius: inherit;
-                pointer-events: none
-            }
+
 
             @supports (aspect-ratio: 1) {
                 body {
@@ -315,188 +108,6 @@
                 }
             }
 
-            .eRL7jO .e72rtr7 {
-                position: relative;
-                overflow: hidden;
-                width: 1200px;
-                height: 800px;
-                background-color: #fff
-            }
-
-            .eRL7jO .eerum1s {
-                position: fixed;
-                overflow: visible;
-                width: 100%;
-                height: 100%;
-                left: 0;
-                top: 0;
-                flex: none;
-                z-index: 1
-            }
-
-            .eRL7jO .e1627cz6,.eRL7jO .evn0loq {
-                position: relative;
-                overflow: visible;
-                width: min-content;
-                height: min-content;
-                flex: none
-            }
-
-            .eRL7jO .e1yuqvj1 {
-                position: relative;
-                width: 45px;
-                height: 45px;
-                flex: none
-            }
-
-            .eRL7jO .e15os4ys,.eRL7jO .e16j9vqo {
-                position: relative;
-                overflow: visible;
-                width: 1120px;
-                height: min-content;
-                flex: none
-            }
-
-            .eRL7jO .e15os4ys {
-                width: 100%;
-                mix-blend-mode: overlay
-            }
-
-            .eRL7jO .e1avyakb {
-                position: relative;
-                overflow: visible;
-                width: 100%;
-                height: auto;
-                flex: none;
-                white-space: pre-wrap;
-                word-wrap: break-word;
-                word-break: break-word;
-                --font-family: "Outfit", serif;
-                --font-style: normal;
-                --font-weight: 700;
-                --text-color: #ffffff;
-                --efont-size: 140px;
-                --letter-spacing: 0px;
-                --text-transform: none;
-                --text-decoration: none;
-                --line-height: 1.2em;
-                --text-alignment: center;
-                --elink-text-color: #0099ff;
-                --elink-text-decoration: underline
-            }
-
-            .eRL7jO .e1ob979x {
-                position: relative;
-                overflow: visible;
-                max-width: 550px;
-                width: 100%;
-                height: min-content;
-                flex: none
-            }
-
-            .eRL7jO .e11k8qmz {
-                position: relative;
-                overflow: visible;
-                width: 1px;
-                height: auto;
-                flex: 1 0 0px;
-                white-space: pre-wrap;
-                word-wrap: break-word;
-                word-break: break-word;
-                --font-family: "Outfit", serif;
-                --font-style: normal;
-                --font-weight: 400;
-                --text-color: #ffffff;
-                --efont-size: 28px;
-                --letter-spacing: 0px;
-                --text-transform: none;
-                --text-decoration: none;
-                --line-height: 1.4em;
-                --text-alignment: center;
-                --elink-text-color: #0099ff;
-                --elink-text-decoration: underline
-            }
-
-            .eRL7jO .efsyrsw {
-                position: relative;
-                overflow: visible;
-                max-width: 430px;
-                width: 100%;
-                height: min-content;
-                flex: none
-            }
-
-            .eRL7jO .efdfkzj-container {
-                position: relative;
-                width: 1px;
-                height: auto;
-                flex: 1 0 0px
-            }
-
-            .eRL7jO .e1rjv000,.eRL7jO .e95uz6r {
-                position: relative;
-                cursor: pointer;
-                width: 34px;
-                height: 34px;
-                flex: none
-            }
-
-            @media (min-width: 1200px) {
-                .eRL7jO .hidden-72rtr7 {
-                    display:none!important
-                }
-            }
-
-            @media (max-width: 1199px) {
-                .eRL7jO .hidden-jfpagq {
-                    display:none!important
-                }
-
-                .eRL7jO .e72rtr7 {
-                    width: 390px;
-                    height: 800px
-                }
-
-                .eRL7jO .e16j9vqo,.eRL7jO .eerum1s {
-                    width: 100%;
-                    height: 100%;
-                    right: auto;
-                    bottom: auto;
-                    left: 0;
-                    top: 0;
-                    flex: none;
-                    aspect-ratio: unset
-                }
-
-                .eRL7jO .e16j9vqo {
-                    max-width: 400px;
-                    min-width: unset;
-                    max-height: unset;
-                    min-height: unset;
-                    height: min-content;
-                    left: auto;
-                    top: auto
-                }
-
-                .eRL7jO .e1avyakb {
-                    --efont-size: 42px
-                }
-
-                .eRL7jO .e11k8qmz {
-                    --efont-size: 24px
-                }
-
-                .eRL7jO .efdfkzj-container {
-                    width: 1px;
-                    height: auto;
-                    right: auto;
-                    bottom: auto;
-                    left: auto;
-                    top: auto;
-                    flex: 1 0 0px;
-                    aspect-ratio: unset
-                }
-            }
 
        
             /* Styles for the "YO" and "Contact Me" text */
