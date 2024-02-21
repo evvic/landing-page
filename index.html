@@ -97,15 +97,40 @@
             .sticky-footer {
                 position: fixed;
                 bottom: 0;
+                flex-direction: row;
                 width: 100%;
                 background-color: rgba(0, 0, 0, 0); /* Transparent black background */
                 padding: 10px;
                 text-align: center;
                 color: #fff; /* Text color for the footer */
                 z-index: 1;
-                font-family: "Outfit", serif;
-                font-size: 1.5em;
+                /* font-family: "Outfit", serif; */
+                font-size: 1em;
             }
+
+            .sticky-footer p {
+                display: inline-block; /* Ensure each <p> is inline */
+                margin: 0;
+                /* flex-grow: 1; Allow each <p> to grow */
+            }
+
+            .sticky-footer a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 5px;
+            }
+
+            .sticky-footer a:hover {
+                color: #491ab9;
+                text-decoration: underline;
+            }
+
+            /* @media (max-width: 600px) {
+                .sticky-footer {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            } */
 
             .transparent-box {
                 text-align: center;
@@ -127,7 +152,7 @@
     <body>
         <!-- End of bodyStart -->
         <div id="main">
-            <h1>loading</h1>
+            <h3>loading</h3>
             <div data-egenerated="true" class="eRL7jO" style="display:contents">
                 <div class="e72rtr7" style="width:100%;min-height:100%" name="Desktop">
                     <div data-component-type="Stack" alt="" data-egenerated="true" style="display:block;transform:none;z-index:1;" class="eerum1s">
@@ -168,12 +193,10 @@
 
         <!-- Sticky Footer -->
         <div class="sticky-footer">
-            <p>
-                "© 2024 EWIC. All rights reserved. | " 
-                <a href="https://ewic.site/policies/terms-and-conditions.html">Terms and Conditions</a> 
-                " | " 
-                <a href="https://ewic.site/policies/privacy-policy.html">Privacy policy</a>
-            </p>
+            <p>© 2024 EWIC.</p>
+            <p>All rights reserved.</p>
+            <p><a href="https://ewic.site/policies/terms-and-conditions.html">Terms and Conditions</a></p>
+            <p><a href="https://ewic.site/policies/privacy-policy.html">Privacy policy</a></p>
         </div>
 
         <script>
